@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "CMCKitFramework"
+  s.name         = "CMCKit"
   s.version      = "0.0.1"
   s.summary      = "An API client framework to access CoinMarketCap's V2 API"
 
