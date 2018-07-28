@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Quotes: Codable {
-    public let usd: String
+    public let usd: USD
     
     public enum CodingKeys: String, CodingKey {
         case usd = "USD"
