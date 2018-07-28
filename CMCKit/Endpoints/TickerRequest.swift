@@ -13,7 +13,7 @@ public struct TickerRequest: CMCRequest {
     public var sort, structure, convert :String?
     public typealias Response = TickerResponse
     public var resourceName: String {
-        return "listings"
+        return "ticker"
     }
     public var parameters: String? {
         var params = "?"
