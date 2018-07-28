@@ -9,7 +9,7 @@
 import Foundation
 
 public struct ListingsResponse: CMCResponse {
-    public typealias D = [ListingsDataElement]
+    public typealias D = [ListingsData]
     public typealias M = ListingsMetadata
     public var data: D
     public var metadata: M

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol CMCResponse: Decodable{
+public protocol CMCResponse: Codable{
     associatedtype D
     associatedtype M
     var data: D {get}

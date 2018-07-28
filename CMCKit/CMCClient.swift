@@ -11,7 +11,7 @@ import Foundation
 public class CMCClient {
     private let baseEndpoint = "https://api.coinmarketcap.com/v2/"
     private let session = URLSession(configuration: .default)
-    public func listings<T: CMCRequest>(_ request: T, callback: @escaping (Result<T.Response>)->Void){
+    public func request<T: CMCRequest>(_ request: T, callback: @escaping (Result<T.Response>)->Void){
         let endpoint = self.endpoint(request)
         let task = session.dataTask(with: URLRequest(url: endpoint)) { data, response, error in
             if let data = data {

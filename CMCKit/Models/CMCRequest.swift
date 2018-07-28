@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol CMCRequest: Encodable {
+public protocol CMCRequest: Codable {
     associatedtype Response: CMCResponse
     var resourceName: String {get}
     var parameters: String? {get}
