@@ -1,5 +1,5 @@
 //
-//  Quotes.swift
+//  GlobalDataQuotes.swift
 //  CMCKit
 //
 //  Created by Ashwin Swaroop on 7/28/18.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-public struct Quotes: Codable {
-    public let usd: USD
+public struct GlobalDataQuotes: Codable {
+    public let usd: GlobalDataUSD
     
     public enum CodingKeys: String, CodingKey {
         case usd = "USD"

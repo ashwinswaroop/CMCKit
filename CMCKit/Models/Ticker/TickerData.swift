@@ -14,7 +14,7 @@ public struct TickerData: Codable {
     public let rank: Int
     public let circulatingSupply, totalSupply: Double
     public let maxSupply: Double?
-    public let quotes: Quotes
+    public let quotes: TickerQuotes
     public let lastUpdated: Int
     
     public enum CodingKeys: String, CodingKey {

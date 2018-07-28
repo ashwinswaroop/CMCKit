@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct USD: Codable {
+public struct TickerUSD: Codable {
     public let price, volume24H, marketCap, percentChange1H: Double
     public let percentChange24H, percentChange7D: Double
     
