@@ -1,5 +1,5 @@
 //
-//  TickerMetadata.swift
+//  TickersMetadata.swift
 //  CMCKit
 //
 //  Created by Ashwin Swaroop on 7/28/18.
@@ -8,12 +8,13 @@
 
 import Foundation
 
-public struct TickerMetadata: Codable {
-    public let timestamp: Int
+public struct TickersMetadata: Codable {
+    public let timestamp, numCryptocurrencies: Int
     public let error: JSONHelper?
-    
+
     public enum CodingKeys: String, CodingKey {
         case timestamp
+        case numCryptocurrencies = "num_cryptocurrencies"
         case error
     }
 }

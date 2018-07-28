@@ -9,23 +9,14 @@
 import Foundation
 
 public struct TickerRequest: CMCRequest {
-    public var start, limit :Int?
-    public var sort, structure, convert :String?
+    public var id: Int?
+    public var structure, convert :String?
     public typealias Response = TickerResponse
     public var resourceName: String {
-        return "ticker"
+        return "ticker/\(id!)"
     }
     public var parameters: String? {
         var params = "?"
-        if let tstart = start {
-            params += "start=\(tstart)"
-        }
-        if let tlimit = limit {
-            params += "limit=\(tlimit)"
-        }
-        if let tsort = sort {
-            params += "sort=\(tsort)"
-        }
         if let tstructure = structure {
             params += "structure=\(tstructure)"
         }
@@ -39,11 +30,9 @@ public struct TickerRequest: CMCRequest {
             return params
         }
     }
-    public init(start: Int?=nil, limit: Int?=nil, sort: String?=nil, structure: String?=nil, convert: String?=nil) {
-            self.start = start
-            self.limit = limit
-            self.sort = sort
-            self.structure = structure
-            self.convert = convert
+    public init(id: Int?=1, structure: String?=nil, convert: String?=nil) {
+        self.id = id
+        self.structure = structure
+        self.convert = convert
     }
 }

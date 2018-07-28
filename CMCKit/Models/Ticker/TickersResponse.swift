@@ -1,5 +1,5 @@
 //
-//  TickerResponse.swift
+//  TickersResponse.swift
 //  CMCKit
 //
 //  Created by Ashwin Swaroop on 7/28/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-public struct TickerResponse: CMCResponse {
+public struct TickersResponse: CMCResponse {
     
-    public typealias D = TickerData
-    public typealias M = TickerMetadata
+    public typealias D = [String: TickerData]
+    public typealias M = TickersMetadata
     public var data: D
     public var metadata: M
 }

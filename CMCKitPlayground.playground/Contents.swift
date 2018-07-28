@@ -9,11 +9,11 @@ let apiClient = CMCClient()
 
 func continueExec(_ resp: ListingsResponse){
     for data in resp.data {
-        print(data.name!)
+        print(data.name)
     }
 }
 
-apiClient.listings(ListingsRequest()) { response in
+apiClient.request(ListingsRequest()) { response in
     switch response {
     case .success(let data):
         continueExec(data)
