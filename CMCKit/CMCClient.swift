@@ -43,6 +43,20 @@ public class CMCClient {
             }
         }
     }
+    public func tickerBySymbol(_ symbol: String, callback: @escaping (Result<TickerResponse>)->Void){
+        self.request(ListingsRequest()){ response in
+            switch response {
+            case .success(let data):
+                for element in data.data {
+                    if element.symbol == symbol {
+                        self.request(TickerRequest(id: element.id), callback)
+                    }
+                }
+            case .failure(let error):
+                print(error);
+            }
+        }
+    }
     private func endpoint<T: CMCRequest>(_ request: T) -> URL {
         if let params = request.parameters {
             return URL(string: "\(baseEndpoint)\(request.resourceName)"+params)!
