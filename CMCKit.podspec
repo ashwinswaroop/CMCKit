@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CMCKit"
-  s.version      = "0.0.1"
-  s.summary      = "An API client framework to access CoinMarketCap's V2 API"
+  s.version      = "0.0.2"
+  s.summary      = "API client for CoinMarketCap V2 endpoints"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-			"An API client framework to access CoinMarketCap's V2 API"
-                   DESC
+CMCKit is a wrapper for CoinMarketCap's new V2 API. V1 is currently still supported, but will be taken offline soon. CMC Kit provides access to the full functionality of CoinMarketCap's V2 API using all of the supported endpoints and request paramters. Additionally, it provides access to some endpoints using custom request parameters to improve usability.
+DESC
 
-  s.homepage     = "http://github.com/ashwinswaroop/"
+  s.homepage     = "http://github.com/ashwinswaroop/CMCKit"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "Copyleft"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  #s.license      = "Copyleft"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
