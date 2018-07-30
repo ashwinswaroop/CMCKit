@@ -1,6 +1,6 @@
 ## CMCKit
 CMCKit is a wrapper for CoinMarketCap's new V2 API. V1 is currently still supported, but will be [taken offline soon.](https://coinmarketcap.com/api/)
-CMC Kit provides access to the full functionality of CoinMarketCap's V2 API using all of the supported endpoints and request paramters.
+CMC Kit provides access to the full functionality of CoinMarketCap's V2 API using all of the supported endpoints and request parameters.
 Additionally, it provides access to some endpoints using custom request parameters to improve usability.
 ## Features
 - Straightforward usage
@@ -12,6 +12,24 @@ Additionally, it provides access to some endpoints using custom request paramete
 ## Requirements
 - iOS 9.0+
 - Xcode 9.0+
+## Installation
+[CocoaPods](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. You can install it with the following command:
+```
+$ gem install cocoapods
+```
+To use CMCKit in your Xcode project, specify it in the ```Podfile```:
+```
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+target 'YourProjectName' do
+  use_frameworks!
+  pod 'CMCKit'
+end
+```
+Then, run the following command:
+```
+$ pod install
+```
 ## Example
 ### Obtaining the current price of Bitcoin
 ```
